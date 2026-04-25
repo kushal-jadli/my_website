@@ -1,4 +1,4 @@
-const text = "Hi, I'm Your Name";
+const text = "Hi, I'm Kushal Jadli";
 let i = 0;
 
 function typeEffect() {
