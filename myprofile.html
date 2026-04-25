@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: white;
+      color: #2a5298;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="typing"></h1>
+  <p>Filmmaker | Assistant Director | Visual Storyteller</p>
+  <button class="btn" onclick="scrollToSection()">View My Work</button>
+</header>
+
+<section id="work">
+  <h2>My Work</h2>
+  <div class="card">Ad Films - Patanjali, Ultra Play</div>
+  <div class="card">Corporate CSR Shoots - Forest & Ocean</div>
+  <div class="card">Freelance Editing & Story Development</div>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <p>I am an aspiring filmmaker passionate about storytelling, visuals, and creating engaging cinematic experiences.</p>
+</section>
+
+<footer>
+  <p>© 2026 Your Name | Built with ❤️</p>
+</footer>
+
+<script>
+  const text = "Hi, I'm Your Name";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 100);
+    }
+  }
+
+  function scrollToSection() {
+    document.getElementById("work").scrollIntoView({ behavior: 'smooth' });
+  }
+
+  window.onload = typeEffect;
+</script>
+
+</body>
+</html>
